@@ -32,5 +32,5 @@ void do_command(char **myArgv){
 			execvp(name, myArgv);
 			
 	}
-	number = (char** )realloc(number, NULL);
+	name = (char** )realloc(name, NULL);
 }

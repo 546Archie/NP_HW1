@@ -15,6 +15,10 @@ char **file_list(void){
 	char **name_list;
 	name_list = malloc(100*sizeof(*name_list));
 	struct dirent *dir;
+	//char *path = getenv("PATH");
+	//printf("%s\n", path);
+	//strcat(path, "/");
+	//d = opendir(path);
 	d = opendir(".");
 	if(d){
 		while((dir = readdir(d)) != NULL){
