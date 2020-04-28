@@ -19,7 +19,7 @@ char **file_list(void){
 	//printf("%s\n", path);
 	//strcat(path, "/");
 	//d = opendir(path);
-	d = opendir(".");
+	d = opendir("./bin/");
 	if(d){
 		while((dir = readdir(d)) != NULL){
 			name = dir->d_name;

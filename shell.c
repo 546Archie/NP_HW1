@@ -22,9 +22,10 @@ int main(){
 			exist = 0;
 			exist = find_command(file_name, myArgv[0]);
 //			printf("exist: %d\n", exist);
-			if(exist==1){ //ccommand found
-//				printf("\nFound command: [%s]", myArgv[0]);
+			if(exist){ //ccommand found
 				do_command(myArgv);
+				//printf("\nFound command: [%s]", myArgv[0]);
+				//exist = 1;
 			}
 			
 			else if(strcmp(myArgv[0], "printenv") == 0){

@@ -5,16 +5,17 @@
 #include <sys/wait.h>
 #include <unistd.h>
 #include <errno.h>
+#include <string.h>
 #include "shell.h"
 
 void do_command(char **myArgv){
 	pid_t pid;
 	int stat;
-	char *name;
+	/*char *name;
 	name = malloc(strlen(myArgv[0]+3)*sizeof(char));
 	strcpy(name, "./");
 	strcat(name, myArgv[0]);
-	strcat(name, "\0");
+	strcat(name, "\0");*/
 	//printf(name);
 	
 	//creat a new child process
@@ -29,8 +30,8 @@ void do_command(char **myArgv){
 			//wait for child to terminate
 			return;
 		case 0:
-			execvp(name, myArgv);
+			execvp(myArgv[0], myArgv);
 			
 	}
-	name = (char** )realloc(name, NULL);
+	//name = (char** )realloc(name, NULL);
 }
