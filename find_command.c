@@ -11,6 +11,8 @@
 int find_command(const char **list, const char *cmd){
 	int c = 0;
 	char *name;
+	if(strcmp(cmd, ">") ==0)
+		return 1;
 //	printf("cmd: %s\n", cmd);
 	while(list[c]!='\0'){
 		if(strcmp(list[c], cmd) ==0){
