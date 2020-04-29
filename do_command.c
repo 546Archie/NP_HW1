@@ -30,7 +30,11 @@ void do_command(char **myArgv){
 			//wait for child to terminate
 			return;
 		case 0:
-			execvp(myArgv[0], myArgv);
+			if(redirect_out(myArgv)==1){
+				return;
+			}
+			else
+				execvp(myArgv[0], myArgv);
 			
 	}
 	//name = (char** )realloc(name, NULL);
