@@ -20,6 +20,9 @@ int main(){
 		file_name = file_list();
 		if(myArgv = parse(line)){
 			exist = 0;
+			/*if(redirect_out(myArgv)==1){
+				continue;
+			}*/
 			exist = find_command(file_name, myArgv[0]);
 //			printf("exist: %d\n", exist);
 			if(exist){ //ccommand found
