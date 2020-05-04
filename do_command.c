@@ -33,9 +33,11 @@ void do_command(char **myArgv){
 			if(redirect_out(myArgv)==1){
 				return;
 			}
-			else
-				execvp(myArgv[0], myArgv);
-			
+			else{
+				pipe_and_exec(myArgv);
+				exit(errno);			
+			}
+				
 	}
 	//name = (char** )realloc(name, NULL);
 }
