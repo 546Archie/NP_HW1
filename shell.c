@@ -56,18 +56,11 @@ int main(){
 			else{
 				printf("\nUnkonwn Command: [%s]", myArgv[0]);
 			}
-			//int status = system("./cat shell.c");
-			/*if(is_builin(myargv[0])){
-				do_builtin(myArgv);
-			}
-			else{
-				fputs("Unkonwn Command: [%s]", myArgv, stdout);
-			}*/
-			
 			free_argv(myArgv);
 		}
 		
 		free_name_list(file_name);
+		sleep(1);
 		fputs("% ", stdout);
 	}
 	exit(0);
